@@ -1,0 +1,30 @@
+{
+  "name": "StatusHistory",
+  "type": "object",
+  "properties": {
+    "contact_id": {
+      "type": "string",
+      "description": "ID des Kontakts"
+    },
+    "old_status": {
+      "type": "string",
+      "description": "Vorheriger Status"
+    },
+    "new_status": {
+      "type": "string",
+      "description": "Neuer Status"
+    },
+    "note": {
+      "type": "string",
+      "description": "Optionale Notiz zur Status\u00e4nderung"
+    },
+    "changed_by": {
+      "type": "string",
+      "description": "E-Mail des Nutzers"
+    }
+  },
+  "required": [
+    "contact_id",
+    "new_status"
+  ]
+}
