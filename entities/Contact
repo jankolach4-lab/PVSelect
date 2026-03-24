@@ -1,0 +1,203 @@
+{
+  "name": "Contact",
+  "type": "object",
+  "properties": {
+    "first_name": {
+      "type": "string",
+      "description": "Vorname"
+    },
+    "last_name": {
+      "type": "string",
+      "description": "Nachname"
+    },
+    "street": {
+      "type": "string",
+      "description": "Stra\u00dfe und Hausnummer"
+    },
+    "zip_code": {
+      "type": "string",
+      "description": "Postleitzahl"
+    },
+    "city": {
+      "type": "string",
+      "description": "Stadt"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Telefonnummer"
+    },
+    "email": {
+      "type": "string",
+      "description": "E-Mail-Adresse"
+    },
+    "building_type": {
+      "type": "string",
+      "enum": [
+        "einfamilienhaus",
+        "zweifamilienhaus",
+        "mehrfamilienhaus"
+      ],
+      "description": "Geb\u00e4udetyp"
+    },
+    "ownership": {
+      "type": "string",
+      "enum": [
+        "eigentuemer",
+        "mieter"
+      ],
+      "description": "Eigent\u00fcmer oder Mieter"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "offen",
+        "nicht_angetroffen",
+        "wiedervorlage",
+        "termin",
+        "lead",
+        "kein_interesse",
+        "pv_wp_vorhanden",
+        "ungeeignet"
+      ],
+      "default": "offen",
+      "description": "Aktueller Status"
+    },
+    "callback_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Wiedervorlagedatum"
+    },
+    "appointment_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Termindatum"
+    },
+    "pv_potential": {
+      "type": "string",
+      "enum": [
+        "hoch",
+        "mittel",
+        "niedrig"
+      ],
+      "description": "PV-Potenzial"
+    },
+    "wp_suitable": {
+      "type": "string",
+      "enum": [
+        "ja",
+        "nein",
+        "unklar"
+      ],
+      "description": "W\u00e4rmepumpen-Eignung"
+    },
+    "roof_area": {
+      "type": "number",
+      "description": "Dachfl\u00e4che in m\u00b2"
+    },
+    "roof_orientation": {
+      "type": "string",
+      "enum": [
+        "N",
+        "NO",
+        "O",
+        "SO",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ],
+      "description": "Dachausrichtung"
+    },
+    "roof_angle": {
+      "type": "number",
+      "description": "Dachneigung in Grad"
+    },
+    "roof_condition": {
+      "type": "string",
+      "enum": [
+        "gut",
+        "mittel",
+        "renovierungsbed\u00fcrftig"
+      ],
+      "description": "Dachzustand"
+    },
+    "power_consumption": {
+      "type": "number",
+      "description": "Stromverbrauch kWh/Jahr"
+    },
+    "heating_system": {
+      "type": "string",
+      "description": "Aktuelles Heizsystem"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Breitengrad"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "L\u00e4ngengrad"
+    },
+    "project_id": {
+      "type": "string",
+      "description": "Zugeh\u00f6riges Projekt"
+    },
+    "assigned_vp": {
+      "type": "string",
+      "description": "Zugewiesener Vertriebspartner (E-Mail)"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notizen"
+    },
+    "form_signed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Formular unterschrieben"
+    },
+    "form_signed_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Datum der Unterschrift"
+    },
+    "form_pdf_url": {
+      "type": "string",
+      "description": "URL des unterschriebenen PDFs"
+    },
+    "signature_url": {
+      "type": "string",
+      "description": "URL der Unterschrift 1"
+    },
+    "signature2_url": {
+      "type": "string",
+      "description": "URL der Unterschrift 2"
+    },
+    "form_products": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Ausgew\u00e4hlte Produkte im Formular"
+    },
+    "form_asbest": {
+      "type": "string",
+      "description": "Asbest-Antwort im Formular"
+    },
+    "form_finanzierung": {
+      "type": "string",
+      "description": "Finanzierung-Antwort im Formular"
+    },
+    "form_monthly_electricity": {
+      "type": "string",
+      "description": "Monatlicher Stromabschlag"
+    },
+    "form_monthly_heating": {
+      "type": "string",
+      "description": "Monatlicher Heizungsabschlag"
+    }
+  },
+  "required": [
+    "last_name",
+    "street",
+    "city"
+  ]
+}
