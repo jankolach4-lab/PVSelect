@@ -1,0 +1,45 @@
+{
+  "name": "Project",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Projektname"
+    },
+    "description": {
+      "type": "string",
+      "description": "Beschreibung"
+    },
+    "region": {
+      "type": "string",
+      "description": "Region/Gebiet"
+    },
+    "polygon_data": {
+      "type": "string",
+      "description": "JSON-String der Polygon-Koordinaten"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "aktiv",
+        "abgeschlossen",
+        "pausiert"
+      ],
+      "default": "aktiv"
+    },
+    "assigned_vps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Zugewiesene Vertriebspartner"
+    },
+    "company_email": {
+      "type": "string",
+      "description": "Firmen-E-Mail f\u00fcr Formulare"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
